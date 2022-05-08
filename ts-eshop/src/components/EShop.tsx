@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { ContainerBox } from './ContainerBox'
+import Main from "./Main";
 
 type CounterState = {
     show: boolean,
@@ -26,6 +27,7 @@ export default class EShop extends Component<CounterProps, CounterState>{
                 <ContainerBox
                     text="test TS + REACT props in function"
                 />
+                <Main />
             </>
         )
     }

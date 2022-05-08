@@ -1,0 +1,92 @@
+[{
+        "_id": "0",
+        "nameProduct": "product 0",
+        "priceProduct": 1200,
+        "imgUrl": "../logo192.png",
+        "descriptionProduct": "description product"
+    },
+    {
+        "_id": "1",
+        "nameProduct": "product 1",
+        "priceProduct": 1100,
+        "imgUrl": "../logo192.png",
+        "descriptionProduct": "description product"
+    },
+    {
+        "_id": "2",
+        "nameProduct": "product 2",
+        "priceProduct": 500,
+        "imgUrl": "../logo192.png",
+        "descriptionProduct": "description product"
+    },
+    {
+        "_id": "3",
+        "nameProduct": "product 3",
+        "priceProduct": 200,
+        "imgUrl": "../logo192.png",
+        "descriptionProduct": "description product"
+    },
+    {
+        "_id": "4",
+        "nameProduct": "product 4",
+        "priceProduct": 1450,
+        "imgUrl": "../logo192.png",
+        "descriptionProduct": "description product"
+    },
+    {
+        "_id": "5",
+        "nameProduct": "product 5",
+        "priceProduct": 1277,
+        "imgUrl": "../logo192.png",
+        "descriptionProduct": "description product"
+    },
+    {
+        "_id": "6",
+        "nameProduct": "product 6",
+        "priceProduct": 4500,
+        "imgUrl": "../logo192.png",
+        "descriptionProduct": "description product"
+    },
+    {
+        "_id": "7",
+        "nameProduct": "product 7",
+        "priceProduct": 2550,
+        "imgUrl": "../logo192.png",
+        "descriptionProduct": "description product"
+    },
+    {
+        "_id": "8",
+        "nameProduct": "product 8",
+        "priceProduct": 785,
+        "imgUrl": "../logo192.png",
+        "descriptionProduct": "description product"
+    },
+    {
+        "_id": "9",
+        "nameProduct": "product 9",
+        "priceProduct": 452,
+        "imgUrl": "../logo192.png",
+        "descriptionProduct": "description product"
+    },
+    {
+        "_id": "10",
+        "nameProduct": "product 10",
+        "priceProduct": 1600,
+        "imgUrl": "../logo192.png",
+        "descriptionProduct": "description product"
+    },
+    {
+        "_id": "11",
+        "nameProduct": "product 11",
+        "priceProduct": 987,
+        "imgUrl": "../logo192.png",
+        "descriptionProduct": "description product"
+    },
+    {
+        "_id": "12",
+        "nameProduct": "product 12",
+        "priceProduct": 358,
+        "imgUrl": "../logo192.png",
+        "descriptionProduct": "description product"
+    }
+]

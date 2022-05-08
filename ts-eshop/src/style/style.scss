@@ -6,12 +6,16 @@
 
 .container {
     width: 92%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 20px auto;
     padding: 20px;
     border: solid 1px $color_container_border;
     border-radius: 5px;
-    background-color: $color_container_bg;
-    box-shadow: $shadow_box $color_container_shadow;
+    // background-color: $color_container_bg;
+    // box-shadow: $shadow_box $color_container_shadow;
 }
 
 .container_hover {
@@ -22,6 +26,23 @@
     border-radius: 5px;
     background-color: $color_container_bg;
     box-shadow: $shadow_box $color_container_shadow;
+    cursor: pointer;
+    &:hover {
+        border: solid 1px $color_container_border_hover;
+        background-color: $color_container_bg_hover;
+        box-shadow: $shadow_box_hover $color_container_shadow_hover;
+    }
+}
+
+.product_box {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: $color_container_bg;
+    box-shadow: $shadow_box $color_container_shadow;
+    border: 1px solid #ccc;
     cursor: pointer;
     &:hover {
         border: solid 1px $color_container_border_hover;
