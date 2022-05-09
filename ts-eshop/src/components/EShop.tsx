@@ -23,10 +23,9 @@ export default class EShop extends Component<CounterProps, CounterState>{
     render() {
         return (
             <>
-                <div> ПРИВЕТ TS REACT!!!!!! </div>
-                <ContainerBox
+                {/* <ContainerBox
                     text="test TS + REACT props in function"
-                />
+                /> */}
                 <Main />
             </>
         )

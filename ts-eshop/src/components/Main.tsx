@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Modal from './Modal';
 import { RenderProduct } from './RenderProduct';
 
 type DataServer = {
@@ -15,7 +16,7 @@ type MainProps = {
 
 type MainState = {
     show: Boolean,
-    data: object,
+    data: Array<DataServer>,
     base: any,
 }
 
@@ -28,6 +29,7 @@ export default class Main extends Component<MainProps, MainState>{
             base: []
         }
         this.renderProduct = this.renderProduct.bind(this);
+        this.startBlock = this.startBlock.bind(this);
     }
 
     renderProduct(data: Array<DataServer>): object {
@@ -44,7 +46,7 @@ export default class Main extends Component<MainProps, MainState>{
         return result
     }
 
-    componentDidMount(): void {
+    startBlock(): void {
         (async () => {
             const result: any = await fetch(`../server.json`);
             const resultData: Array<DataServer> = await result.json()
@@ -56,12 +58,19 @@ export default class Main extends Component<MainProps, MainState>{
         })()
     }
 
+    componentDidMount(): void {
+        // this.startBlock();
+    }
+
     render() {
         return (
             <>
-                <div className='container'>
+                {/* <div className='container'>
                     {this.state.base}
-                </div>
+                </div> */}
+                <Modal
+                    textHeader='Header test'
+                />
             </>
         )
     }
