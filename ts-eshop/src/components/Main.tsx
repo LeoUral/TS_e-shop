@@ -60,9 +60,13 @@ export default class Main extends Component<MainProps, MainState>{
 
     componentDidMount(): void {
         // this.startBlock();
+
+        console.log(`TYPE::: `, typeof (<h1> </h1>))
+
     }
 
     render() {
+        const renderBody = (<h1> test Body render </h1>)
         return (
             <>
                 {/* <div className='container'>
@@ -70,6 +74,7 @@ export default class Main extends Component<MainProps, MainState>{
                 </div> */}
                 <Modal
                     textHeader='Header test'
+                    body={renderBody}
                 />
             </>
         )

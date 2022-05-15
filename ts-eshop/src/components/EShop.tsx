@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ContainerBox } from './ContainerBox'
+// import { ContainerBox } from './ContainerBox'
 import Main from "./Main";
 
 type CounterState = {
@@ -7,6 +7,7 @@ type CounterState = {
 }
 
 type CounterProps = {
+
 }
 
 export default class EShop extends Component<CounterProps, CounterState>{

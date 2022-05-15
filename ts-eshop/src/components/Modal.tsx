@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 type ModalProps = {
     textHeader: string,
+    body: any,
 }
 
 type ModalState = {
@@ -24,6 +25,7 @@ export default class Modal extends Component<ModalProps, ModalState> {
     render() {
         const show = this.state.show;
         const textHeader = this.props.textHeader;
+        const body = this.props.body;
         return (
             <>
                 {show && <div className='modal'>
@@ -41,7 +43,7 @@ export default class Modal extends Component<ModalProps, ModalState> {
                             </div>
                         </header>
                         <div className='modal_body'>
-                            test body
+                            {body}
                         </div>
 
                     </div>

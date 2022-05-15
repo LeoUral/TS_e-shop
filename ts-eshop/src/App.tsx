@@ -1,5 +1,4 @@
 import React from 'react';
-import '../src/style/css/style.css';
 import EShop from './components/EShop'
 
 function App() {
