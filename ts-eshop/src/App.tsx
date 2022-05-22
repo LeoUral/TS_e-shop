@@ -1,10 +1,15 @@
 import React from 'react';
-import EShop from './components/EShop'
+import BasketPriceTotal from './components/BasketPriceTotal';
+import BasketProductTotal from './components/BasketProductTotal';
+import TestBasket from './components/TestBasket'
+
 
 function App() {
   return (
     <div className="App">
-      <EShop />
+      <TestBasket />
+      <BasketPriceTotal />
+      <BasketProductTotal />
     </div>
   );
 }
