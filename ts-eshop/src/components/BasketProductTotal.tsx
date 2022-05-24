@@ -18,21 +18,25 @@ const BasketProductTotal: React.FC = () => {
             }}
         >
             {
-                basket.map((item: BasketObject, index) =>
-                    <div
-                        key={index}
-                        onClick={() => { removeProduct(item.id) }}
-                        style={{
-                            border: '1px solid #000',
-                            marginTop: '3px',
-                            cursor: 'pointer',
-                            boxSizing: 'border-box',
-                            padding: '3px'
-                        }}
-                    >
-                        {item.name} - {item.price} руб.
-                    </div>
-                )
+                basket.map((item: BasketObject) => {
+                    if (item.id) {
+                        return (
+                            <div
+                                key={item.id}
+                                onClick={() => { removeProduct(item.id) }}
+                                style={{
+                                    border: '1px solid #000',
+                                    marginTop: '3px',
+                                    cursor: 'pointer',
+                                    boxSizing: 'border-box',
+                                    padding: '3px',
+                                }}
+                            >
+                                {item.name} - {item.price} руб.
+                            </div>
+                        )
+                    }
+                })
             }
         </div>
     )

@@ -1,8 +1,10 @@
 
 export type BasketObject = {
+    idp: string;
     id: string;
     name: string;
-    price: number
+    price: number;
+    description: string;
 }
 
 export interface BasketState {
