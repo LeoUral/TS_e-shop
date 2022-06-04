@@ -14,7 +14,7 @@ const TestBasket = ({ name, test }: TestProps) => {
     const { basket } = UseTypedSelector(state => state.basket)
     const { addBasket } = useActions()
 
-    console.log(`BASKET::: `, basket);
+    console.log(`BASKET::: `, basket); // test
     console.log(`NAME::: `, name); // test
 
     return (

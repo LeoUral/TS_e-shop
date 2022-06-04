@@ -1,3 +1,201 @@
 .App {
   width: 100%;
 }
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.modal_shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 101;
+}
+
+.modal_window {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 5px #494949;
+          box-shadow: 3px 3px 5px #494949;
+  z-index: 102;
+}
+
+.modal_window .header_modal {
+  width: 100%;
+  height: 15%;
+  border-radius: 5px 5px 0 0;
+  padding: 15px 10px;
+  background-color: #068fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid #494949;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal_window .header_modal .hedaer_modal_close {
+  width: 30px;
+  height: 30px;
+  margin-top: -7px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #b91111;
+  cursor: pointer;
+}
+
+.modal_window .header_modal .hedaer_modal_close:hover {
+  color: #fa8686;
+}
+
+.modal_window .body_modal {
+  width: 100%;
+  height: 70%;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px 10px;
+}
+
+.modal_window .footer_modal {
+  width: 100%;
+  height: 15%;
+  border-radius: 0 0 5px 5px;
+  background-color: #eee;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px 10px;
+  border-top: 1px solid #494949;
+}
+
+.form_login {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form_login .input_block {
+  width: 70%;
+  height: 70%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form_login .input_block input {
+  margin: 3px 0;
+  height: 20px;
+  font-size: 1rem;
+}
+
+.form_login .button_send {
+  width: 150px;
+  height: 37px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 5px;
+  color: #fff;
+  background-color: #136303;
+  border-radius: 5px;
+  border: 0;
+  -webkit-box-shadow: 3px 3px 5px #494949;
+          box-shadow: 3px 3px 5px #494949;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.form_login .button_send:hover {
+  background-color: #0b3b02;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.form_login .button_send:active {
+  -webkit-box-shadow: 0 0 0;
+          box-shadow: 0 0 0;
+  background-color: #0b3b02;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.form_login .button_registration {
+  width: 150px;
+  height: 37px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 5px;
+  color: #fff;
+  background-color: #0056c7;
+  border-radius: 5px;
+  border: 0;
+  -webkit-box-shadow: 3px 3px 5px #494949;
+          box-shadow: 3px 3px 5px #494949;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.form_login .button_registration:hover {
+  background-color: #002d68;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.form_login .button_registration:active {
+  -webkit-box-shadow: 0 0 0;
+          box-shadow: 0 0 0;
+  background-color: #002d68;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}

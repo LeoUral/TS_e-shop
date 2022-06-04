@@ -1,4 +1,3 @@
-import { UseTypedSelector } from "../../hooks/useTypedSelector";
 import { BasketState, BasketAction, BasketActionTypes } from "../../types/basket";
 
 
