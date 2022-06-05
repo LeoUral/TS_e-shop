@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 type FormModalProps = {
-    doCloseModal: any
+    doCloseModal: any;
+    callViewRegistration: any;
 }
 
 export type LoginData = {
@@ -9,7 +10,7 @@ export type LoginData = {
     password: string;
 }
 
-export const FormModal = ({ doCloseModal }: FormModalProps) => {
+export const FormLogin = ({ doCloseModal, callViewRegistration }: FormModalProps) => {
 
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
@@ -58,14 +59,20 @@ export const FormModal = ({ doCloseModal }: FormModalProps) => {
                 <div style={{ margin: '0 auto' }}>
                     <button
                         className="button_send"
-                        onClick={(e) => { handleClickSend(e); e.preventDefault() }}
+                        onClick={(e) => {
+                            handleClickSend(e);
+                            e.preventDefault()
+                        }}
 
                     >
                         TO COME IN
                     </button>
                     <button
                         className="button_registration"
-                        onClick={(e) => { e.preventDefault() }}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            callViewRegistration()
+                        }}
                     >
                         REGISTRATION
                     </button>

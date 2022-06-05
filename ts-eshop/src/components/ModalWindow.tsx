@@ -1,14 +1,24 @@
 import React, { useState } from 'react';
-import { FormModal } from './FormModal';
+import { FormLogin } from './logIn/FormLogin';
+import { FormRegistration } from './logIn/FormRegistration';
 
 type ModalProps = {
     footerModal: string;
     headerModal: string;
     doClose: any;
-
+    showRegistration: boolean;
+    sendRegistration: any;
+    callViewRegistration: any;
 }
 
-export const ModalWindow = ({ headerModal, footerModal, doClose }: ModalProps) => {
+export const ModalWindow = ({
+    headerModal,
+    footerModal,
+    doClose,
+    showRegistration,
+    sendRegistration,
+    callViewRegistration,
+}: ModalProps) => {
 
     return (
         <div className='modal'>
@@ -27,9 +37,15 @@ export const ModalWindow = ({ headerModal, footerModal, doClose }: ModalProps) =
                     </div> */}
                 </header>
                 <div className='body_modal'>
-                    <FormModal
-                        doCloseModal={doClose}
-                    />
+                    {!showRegistration &&
+                        <FormLogin
+                            doCloseModal={doClose}
+                            callViewRegistration={callViewRegistration}
+                        />}
+                    {showRegistration &&
+                        <FormRegistration
+                            sendRegistration={sendRegistration}
+                        />}
                 </div>
                 <footer className='footer_modal'>
                     {footerModal}

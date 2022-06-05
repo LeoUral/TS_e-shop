@@ -24,7 +24,7 @@
 
 .modal_window {
   width: 50%;
-  height: 50%;
+  height: 60%;
   position: absolute;
   top: 20%;
   left: 25%;
@@ -41,7 +41,7 @@
   width: 100%;
   height: 15%;
   border-radius: 5px 5px 0 0;
-  padding: 15px 10px;
+  padding: 20px 20px;
   background-color: #068fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -94,6 +94,7 @@
           box-sizing: border-box;
   padding: 15px 10px;
   border-top: 1px solid #494949;
+  color: #c52d2d;
 }
 
 .form_login {
@@ -136,6 +137,10 @@
   margin: 3px 0;
   height: 20px;
   font-size: 1rem;
+}
+
+.form_login .button_block {
+  margin: 20px auto 0 auto;
 }
 
 .form_login .button_send {
