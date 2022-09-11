@@ -41,20 +41,38 @@ export const FormLogin = ({ doCloseModal, callViewRegistration }: FormModalProps
         <>
             <form className="form_login">
                 <div className="input_block">
-                    <input
-                        className="input_login"
-                        type="text"
-                        placeholder="login"
-                        id="login"
-                        onChange={(e) => { handleChangeLogin(e.target.value) }}
-                    />
-                    <input
-                        className="input_password"
-                        type="password"
-                        placeholder="password"
-                        id="password"
-                        onChange={(e) => { handleChangePassword(e.target.value) }}
-                    />
+
+                    <div
+                        className='input_position'
+                    >
+                        LOGIN: &nbsp;
+                        <span>
+                            <input
+                                className="input_login"
+                                type="text"
+                                placeholder="login"
+                                id="login"
+                                onChange={(e) => { handleChangeLogin(e.target.value) }}
+                            />
+                        </span>
+                    </div>
+
+                    <div
+                        className='input_position'
+                    >
+                        ПАРОЛЬ: &nbsp;
+                        <span>
+                            <input
+                                className="input_password"
+                                type="password"
+                                placeholder="password"
+                                id="password"
+                                onChange={(e) => { handleChangePassword(e.target.value) }}
+                            />
+                        </span>
+                    </div>
+
+
                 </div>
                 <div style={{ margin: '0 auto' }}>
                     <button

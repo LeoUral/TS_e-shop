@@ -62,49 +62,91 @@ export const FormRegistration = ({ sendRegistration }: RegistrationProps) => {
         <>
             <form className="form_login">
                 <div className="input_block">
+                    <div
+                        className='input_position'
+                    >Имя: &nbsp;
+                        <span>
+                            <input
+                                className="input_login"
+                                type="text"
+                                title="Имя"
+                                placeholder="Name"
+                                id="name"
+                                onChange={(e) => { handleChangeName(e.target.value) }}
+                            />
+                        </span>
+                    </div>
 
-                    <input
-                        className="input_login"
-                        type="text"
-                        placeholder="Name"
-                        id="name"
-                        onChange={(e) => { handleChangeName(e.target.value) }}
-                    />
-                    <input
-                        className="input_login"
-                        type="text"
-                        placeholder="Surname"
-                        id="surname"
-                        onChange={(e) => { handleChangeSurname(e.target.value) }}
-                    />
-                    <input
-                        className="input_login"
-                        type="phone"
-                        placeholder="phone"
-                        id="phone"
-                        onChange={(e) => { handleChangePhone(e.target.value) }}
-                    />
-                    <input
-                        className="input_login"
-                        type="email"
-                        placeholder="Email"
-                        id="email"
-                        onChange={(e) => { handleChangeEmail(e.target.value) }}
-                    />
-                    <input
-                        className="input_login"
-                        type="text"
-                        placeholder="login"
-                        id="login"
-                        onChange={(e) => { handleChangeLogin(e.target.value) }}
-                    />
-                    <input
-                        className="input_password"
-                        type="password"
-                        placeholder="password"
-                        id="password"
-                        onChange={(e) => { handleChangePassword(e.target.value) }}
-                    />
+                    <div
+                        className='input_position'
+                    >Фамилия: &nbsp;
+                        <span>
+                            <input
+                                className="input_login"
+                                type="text"
+                                placeholder="Surname"
+                                id="surname"
+                                onChange={(e) => { handleChangeSurname(e.target.value) }}
+                            />
+                        </span>
+                    </div>
+
+                    <div
+                        className='input_position'
+                    >Телефон: &nbsp;
+                        <span>
+                            <input
+                                className="input_login"
+                                type="phone"
+                                placeholder="phone"
+                                id="phone"
+                                onChange={(e) => { handleChangePhone(e.target.value) }}
+                            />
+                        </span>
+                    </div>
+
+                    <div
+                        className='input_position'
+                    >Электронный адрес: &nbsp;
+                        <span>
+                            <input
+                                className="input_login"
+                                type="email"
+                                placeholder="Email"
+                                id="email"
+                                onChange={(e) => { handleChangeEmail(e.target.value) }}
+                            />
+                        </span>
+                    </div>
+
+                    <div
+                        className='input_position'
+                    >LOGIN: &nbsp;
+                        <span>
+                            <input
+                                className="input_login"
+                                type="text"
+                                placeholder="login"
+                                id="login"
+                                onChange={(e) => { handleChangeLogin(e.target.value) }}
+                            />
+                        </span>
+                    </div>
+
+                    <div
+                        className='input_position'
+                    >Пароль: &nbsp;
+                        <span>
+                            <input
+                                className="input_password"
+                                type="password"
+                                placeholder="password"
+                                id="password"
+                                onChange={(e) => { handleChangePassword(e.target.value) }}
+                            />
+                        </span>
+                    </div>
+
                 </div>
                 <div className="button_block">
                     <button

@@ -6,7 +6,7 @@ import { TypeDataRegistration } from './components/logIn/FormRegistration';
 import { ModalWindow } from './components/ModalWindow';
 import TestBasket from './components/TestBasket'
 import { TEST } from './components/testProducts';
-
+import server from '../src/server/Server';
 
 
 const App = () => {
@@ -15,8 +15,12 @@ const App = () => {
   const [showRegistration, setShowRegistration] = useState(false);
   const [errorFooter, setErrorFooter] = useState(false);
 
-  const doCloseModal = (obj: LoginData) => {
+  const doCloseModal = async (obj: LoginData) => {
     console.log(`OBJECT::: `, obj); // test
+
+    const result = await server.sendDataLogin(obj);
+
+    console.log(`RESULT: `, result); // test
 
     //todo: временная проверка логина и пароля
     if (obj.login === 'abcd' && obj.password === '12345') {
@@ -26,11 +30,15 @@ const App = () => {
     }
   }
 
-  const sendRegistration = (objRegistration: TypeDataRegistration) => {
+  const sendRegistration = async (objRegistration: TypeDataRegistration) => {
     console.log(`OBJECT REGISTARTION::: `, objRegistration);
-    setShowRegistration(false);
     // todo: сделать процедуру проверки данных и регистрацию
 
+    const result = await server.sendDataRegistration(objRegistration);
+
+    console.log(`RESULT: `, result); // test
+
+    setShowRegistration(false);
   }
 
   const callViewRegistration = () => {
