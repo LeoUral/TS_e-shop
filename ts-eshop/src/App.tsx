@@ -16,14 +16,12 @@ const App = () => {
   const [errorFooter, setErrorFooter] = useState(false);
 
   const doCloseModal = async (obj: LoginData) => {
-    console.log(`OBJECT::: `, obj); // test
-
     const result = await server.sendDataLogin(obj);
 
-    console.log(`RESULT: `, result); // test
+    console.log(`RESULT:> `, result); // test
 
     //todo: временная проверка логина и пароля
-    if (obj.login === 'abcd' && obj.password === '12345') {
+    if (result.server === 'OK') {
       setShowModal(false)
     } else {
       viewErrorFooter();

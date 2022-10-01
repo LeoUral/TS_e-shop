@@ -5,7 +5,7 @@ import { TypeDataRegistration } from '../components/logIn/FormRegistration';
 
 class Server {
 
-    key: string = '12345';
+    key: string = 'Jc4EUsxLADBu_sm0g2lnX';
     url: string = 'http://localhost:3001';
 
     // constructor(key: string, url: string) {
@@ -22,7 +22,7 @@ class Server {
 
         console.log(`LoginData:::: `, data);
         console.log(`URL:::: `, this.url);
-        console.log(`KEY:::: `, this.key);
+        // console.log(`KEY:::: `, this.key);
 
         const body = JSON.stringify({
             key: this.key,

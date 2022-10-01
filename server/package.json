@@ -4,14 +4,17 @@
     "description": "Server for TS_e-shop",
     "main": "index.js",
     "scripts": {
-        "start": "node index.js",
-        "dev": "nodemon index.js"
+        "db:migrate": "knex migrate:latest",
+        "start": "cross-env npm run db:migrate && node index.js",
+        "dev": "cross-env npm run db:migrate && nodemon index.js"
     },
     "keywords": [],
     "author": "Leonid Kudryashov",
     "license": "ISC",
     "dependencies": {
         "cors": "^2.8.5",
+        "cross-env": "^7.0.3",
+        "crypto": "^1.0.1",
         "dotenv": "^16.0.1",
         "express": "^4.18.1",
         "knex": "^2.3.0",

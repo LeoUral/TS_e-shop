@@ -18,12 +18,19 @@ const knex = require('knex')({
 
 const login = require("./src/login/login");
 const registration = require("./src/login/registration");
+const { log } = require("console");
 
 const app = express()
 const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
+
+app.use((req, res, next) => {
+    req.knex = knex
+
+    next();
+})
 
 app.post('/login', login)
 app.post('/registration', registration)
