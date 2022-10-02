@@ -48,7 +48,7 @@ export const ModalWindow = ({
                         />}
                 </div>
                 <footer className='footer_modal'>
-                    {footerModal}
+                    <b> {footerModal} </b>
                 </footer>
 
             </div>

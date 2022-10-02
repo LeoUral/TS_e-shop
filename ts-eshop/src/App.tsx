@@ -14,6 +14,7 @@ const App = () => {
   const [showModal, setShowModal] = useState(true);
   const [showRegistration, setShowRegistration] = useState(false);
   const [errorFooter, setErrorFooter] = useState(false);
+  const [textError, setTextError] = useState('')
 
   const doCloseModal = async (obj: LoginData) => {
     const result = await server.sendDataLogin(obj);
@@ -24,7 +25,7 @@ const App = () => {
     if (result.server === 'OK') {
       setShowModal(false)
     } else {
-      viewErrorFooter();
+      viewErrorFooter('Не верный логин или пароль!');
     }
   }
 
@@ -36,16 +37,22 @@ const App = () => {
 
     console.log(`RESULT: `, result); // test
 
-    setShowRegistration(false);
+    if (result.server === 'OK') {
+      setShowRegistration(false)
+    } else {
+      viewErrorFooter('Ошибка при регистрации(такой логин уже есть)')
+    }
+
   }
 
   const callViewRegistration = () => {
     setShowRegistration(!showRegistration)
   }
 
-  const viewErrorFooter = () => {
+  const viewErrorFooter = (text: string) => {
+    setTextError(text)
     setErrorFooter(true)
-    setTimeout(() => { setErrorFooter(false) }, 2000)
+    setTimeout(() => { setErrorFooter(false) }, 3000)
   }
 
   return (
@@ -58,7 +65,7 @@ const App = () => {
       {showModal &&
         <ModalWindow
           headerModal={showRegistration ? "REGISTRATION" : "LOG IN"}
-          footerModal={errorFooter ? "Ошибка ввода пароля или логина!!!" : ""}
+          footerModal={errorFooter ? textError : ""}
           showRegistration={showRegistration}
           doClose={doCloseModal}
           sendRegistration={sendRegistration}

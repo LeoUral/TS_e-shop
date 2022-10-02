@@ -18,19 +18,27 @@ module.exports = async (req, res) => {
 
         //* 1: сформировать HASH пароля
         const confusionPassword = crypto.createHash("sha256", secret).update(password).digest("hex");
-        console.log(`newPASSWORD::: `, confusionPassword); // test
+
+        const loginCheck = await knex('user_registration')
+            .select()
+            .where({ login }).first();
 
         //todo 3: Сохранить нового пользователя в БД
-        await knex('user_registration').insert({
-            name: name,
-            surname: surname,
-            phone: phone,
-            email: email,
-            login: login,
-            password: confusionPassword
-        });
+        if (!loginCheck) {
+            await knex('user_registration').insert({
+                name: name,
+                surname: surname,
+                phone: phone,
+                email: email,
+                login: login,
+                password: confusionPassword
+            });
 
-        res.json({ server: 'Регистрация в процессе разработки' })
+            res.json({ server: 'OK' })
+        } else {
+            console.log(`Ошибка регистрации`);
+            res.json({ server: 'Ошибка регистрации' })
+        }
     } else {
         console.log(`Ошибка ключа`);
         res.json({ server: 'Ошибка ключа' })

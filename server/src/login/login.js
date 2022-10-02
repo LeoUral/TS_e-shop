@@ -20,10 +20,10 @@ module.exports = async (req, res) => {
             .where({
                 login: login,
                 password: confusionPassword
-            });
+            }).first();
 
         // * 2: проверить на наличие пользователя (login, HASH-password)
-        if (userData.length && userData[0].password === confusionPassword && login === userData[0].login) {
+        if (userData && userData.password === confusionPassword && login === userData.login) {
             console.log(`ВХОД в систему`);
 
             res.json({ server: 'OK' })
